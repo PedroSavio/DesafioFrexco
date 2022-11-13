@@ -31,7 +31,6 @@ def Create(request):
 
         # Verifica se o usuário é valido
         if user_serializer.is_valid():
-            print("User Serializer", user_serializer)
             user_serializer.save()
             return JsonResponse("Usuario adicionado com sucesso!", safe=False)
         return JsonResponse("Usuario invalido!", safe=False)
